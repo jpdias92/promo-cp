@@ -180,11 +180,9 @@ def get_promo_next_months(web_driver, from_station, to_station, passenger_class,
 
 
 def main():
-
+    passenger_class = PASSENGER_CLASS
     applicable_weekdays = APPLICABLE_WEEKDAYS
-
     time_range = TIME_RANGE
-
     hour_lower_bound = HOUR_LOWER_BOUND
     hour_upper_bound = HOUR_UPPER_BOUND
 
@@ -200,7 +198,7 @@ def main():
                         metavar="stationName", default=DESTINATION_STATION,
                         help="The name of the destination station. Must match the name in CP website.")
 
-    parser.add_argument("-c", "--passengerClass", type=int, nargs=1,
+    parser.add_argument("-c", "--passengerClass", type=int,
                         metavar="class", default=PASSENGER_CLASS,
                         help="The desired class. Possible values are (1)st class or (2)nd class")
 
@@ -225,7 +223,9 @@ def main():
 
     origin_station = args.origin
     destination_station = args.destination
-    passenger_class = args.passengerClass[0]
+    if args.passengerClass in [1, 2]:
+        passenger_class = args.passengerClass
+
     if args.weekDay is not None:
         applicable_weekdays = args.weekDay
 
