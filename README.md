@@ -12,7 +12,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-There is an install.sh script that will start a virtual environment (venv) and install the project's dependencies, selenium and bs4.
+There is an install.sh script that will start a virtual environment (venv) and install the project's dependencies, selenium and bs4. Using this script:
+
+1. Run the install script: `./install.sh`
+1. Activate the virtual environment: `source venv/bin/activate`. To stop using the venv type `deactivate`.
 
 ## Built With
 
