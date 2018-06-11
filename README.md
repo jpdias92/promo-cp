@@ -17,6 +17,13 @@ There is an install.sh script that will start a virtual environment (venv) and i
 1. Run the install script: `./install.sh`
 1. Activate the virtual environment: `source venv/bin/activate`. To stop using the venv type `deactivate`.
 
+### Running
+
+The program will request a search for each applicable day on cp.pt website, using the parameters specified (e.g. origin station and destination) and, after submitting a new search for each day, will print all promotional tickets found that match the specified filters.
+
+1. You can try the program using default parameters with the command `python promo`.
+1. You can check the available options and example usage with `python promo -h`.
+
 ## Built With
 
 * [PyCharm](https://www.jetbrains.com/pycharm/) - The IDE used
