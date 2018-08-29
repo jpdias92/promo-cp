@@ -85,6 +85,12 @@ def init_web_driver_chrome():
     # set the window size
     options.add_argument('window-size=1200x600')
 
+    # These 2 options are needed to run headless Chrome inside a docker container, otherwise an error was thrown along the lines of:
+    # selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally
+    # (unknown error: DevToolsActivePort file doesn't exist)
+    options.add_argument('disable-dev-shm-usage')
+    options.add_argument('no-sandbox')
+
     # initialize the driver
     driver = webdriver.Chrome(chrome_options=options)
 
