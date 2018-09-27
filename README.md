@@ -19,8 +19,8 @@ About the usage of this program, it will request a search for each applicable da
 #### Running
 
 1. Build an image from the Dockerfile with the command `docker build -t promo-cp .`
-1. Run the image you built on last step with `docker run -it promo-cp`.
-1. You can check the available options and example usage with `docker run promo-cp -h`.
+1. Run the image you built on last step with `docker run -it promo-cp`
+1. You can check the available options and example usage with `docker run promo-cp -h`
 
 
 ### Method 2 - Running locally
@@ -34,13 +34,19 @@ About the usage of this program, it will request a search for each applicable da
 There is an install.sh script that will start a virtual environment (venv) and install the project's dependencies, selenium and bs4. Using this script:
 
 1. Run the install script: `./install.sh`
-1. Activate the virtual environment: `source venv/bin/activate`. To stop using the venv type `deactivate`.
+1. Activate the virtual environment: `source venv/bin/activate`. To stop using the venv type `deactivate`
 
 #### Running
 
-1. You can try the program using default parameters with the command `python promo_cp.py`.
-1. You can check the available options and example usage with `python promo -h`.
+1. You can try the program using default parameters with the command `python promo_cp.py`
+1. You can check the available options and example usage with `python promo -h`
 
+## Examples
+
+* Search for trips from Lisboa Oriente to Vila Nova de Gaia, on Fridays, with departure time between 16h and 21h
+```
+docker run promo-cp -o "Lisboa - Oriente" -d "Vila Nova de Gaia-Devesas" -w 4 -hl 16 -hu 21
+``` 
 
 ## Built With
 
@@ -51,7 +57,7 @@ There is an install.sh script that will start a virtual environment (venv) and i
 
 ## Authors
 
-* **Joao Dias** - *Initial work* - [jpdias92](https://github.com/jpdias92)
+* **Joao Dias** - [jpdias92](https://github.com/jpdias92)
 
 ## License
 
