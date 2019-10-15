@@ -18,7 +18,8 @@ About the usage of this program, it will request a search for each applicable da
 
 #### Running
 
-1. Build an image from the Dockerfile with the command `docker build -t promo-cp .`
+1. Pull the latest Docker image from Docker Hub, with `docker pull jpdias92/promo-cp`
+   * Alternatively, build the image from the Dockerfile with `docker build -t promo-cp .`
 1. Run the image you built on last step with `docker run -it promo-cp`
 1. You can check the available options and example usage with `docker run promo-cp -h`
 
