@@ -46,7 +46,7 @@ There is an install.sh script that will start a virtual environment (venv) and i
 
 * Search for trips from Lisboa Oriente to Vila Nova de Gaia, on Fridays, with departure time between 16h and 21h
 ```
-docker run promo-cp -o "Lisboa - Oriente" -d "Vila Nova de Gaia-Devesas" -w 4 -hl 16 -hu 21
+docker run -it jpdias92/promo-cp -o "Lisboa - Oriente" -d "Vila Nova de Gaia-Devesas" -w 4 -hl 16 -hu 21
 ``` 
 
 ## Built With
